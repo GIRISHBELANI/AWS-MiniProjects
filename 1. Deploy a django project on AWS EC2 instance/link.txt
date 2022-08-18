@@ -1,0 +1,5 @@
+Django Project used:	https://github.com/shreys7/django-todo
+
+Corrections inside settings.py:
+TIME_ZONE = 'Asia/kolkata'	--->     TIME_ZONE = 'Asia/Kolkata'
+ALLOWED_HOSTS = []	--->     ALLOWED_HOSTS = ['your_public_IP']
