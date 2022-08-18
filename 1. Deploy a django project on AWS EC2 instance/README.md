@@ -15,10 +15,10 @@ Copy a project from GitHub and Deploy it on Amazon EC2 Instance
 
 ![App Screenshot](https://github.com/GIRISHBELANI/AWS-MiniProjects/blob/master/1.%20Deploy%20a%20django%20project%20on%20AWS%20EC2%20instance/01.%20Give%20a%20tag%20to%20your%20instance.jpg?raw=true)
 
+
 **Step 5 :** Select Ubuntu Server AMI
+
 ![App Screenshot](https://github.com/GIRISHBELANI/AWS-MiniProjects/blob/master/1.%20Deploy%20a%20django%20project%20on%20AWS%20EC2%20instance/02.%20Select%20Ubuntu%20Server%20AMI.png?raw=true)
-
-
 
 
 **Step 6 :** Select your existing key pair or Create a new one.
@@ -27,6 +27,7 @@ Copy a project from GitHub and Deploy it on Amazon EC2 Instance
 
 
 **Step 7 :** Create Security Group
+
 ![App Screenshot](https://github.com/GIRISHBELANI/AWS-MiniProjects/blob/master/1.%20Deploy%20a%20django%20project%20on%20AWS%20EC2%20instance/04.%20Create%20a%20security%20group.png?raw=true)
 
 **Step 8 :** Click on launch Instance
@@ -38,10 +39,13 @@ Copy a project from GitHub and Deploy it on Amazon EC2 Instance
 ![App Screenshot](https://github.com/GIRISHBELANI/AWS-MiniProjects/blob/master/1.%20Deploy%20a%20django%20project%20on%20AWS%20EC2%20instance/06.%20Refresh%20your%20Instance%20page%20and%20your%20instance%20is%20running%20.png?raw=true)
 
 ## Connect with SSH Client (Putty) and Install Python and Django
+
 **Step 10 :** Open your SSH client (Putty) and paste your Public IP from your Instance
+
 ![App Screenshot](https://github.com/GIRISHBELANI/AWS-MiniProjects/blob/master/1.%20Deploy%20a%20django%20project%20on%20AWS%20EC2%20instance/07.%20Open%20Putty%20and%20paste%20your%20Public%20IP%20from%20Instance.png?raw=true)
 
 **Step 11 :** Browse your ppk file (generated while creating key pair) ---> Click Open
+
 ![App Screenshot](https://github.com/GIRISHBELANI/AWS-MiniProjects/blob/master/1.%20Deploy%20a%20django%20project%20on%20AWS%20EC2%20instance/08.%20Browse%20your%20ppk%20file%20and%20Click%20Open.png?raw=true)
 
 
@@ -116,8 +120,9 @@ vi settings.py
 ```
 *Make corrections :*
 
-ALLOWED_HOSTS = []	--->     ALLOWED_HOSTS = ['your_public_IP']
-TIME_ZONE = 'Asia/kolkata'	--->  TIME_ZONE = 'Asia/Kolkata'
+ALLOWED_HOSTS = []	        --->     ALLOWED_HOSTS = ['your_public_IP']
+
+TIME_ZONE = 'Asia/kolkata'	--->     TIME_ZONE = 'Asia/Kolkata'
 
 
 ```
@@ -131,19 +136,17 @@ python3 manage.py runserver
 
 
 **Step 16 :** 
-
 Now, copy your Public IP address and paste it on Chrome Web Browser.
 ```
 http://your_public_IP:8000
 ```
 If page is showing error, it means you have not allow port no. 8000 from EC2
 
-**Step 17 :**
-Go to the security group you have created & allow 8000 port.
+**Step 17 :** Go to the security group you have created & allow 8000 port.
 
 ![App Screenshot](https://github.com/GIRISHBELANI/AWS-MiniProjects/blob/master/1.%20Deploy%20a%20django%20project%20on%20AWS%20EC2%20instance/13.%20Goto%20the%20security%20group%20you%20have%20created%20&%20allow%208000%20port.png?raw=true)
 
-**Step 18 :**
+**Step 18 :** 
 Edit Inbound Rules and allow 8000 port
 
 
@@ -162,4 +165,5 @@ Now your project will work on Chrome Browser.
 
 
 **Step 20 :** Now you can terminate your Instance, if you want.
+
 ![App Screenshot](https://github.com/GIRISHBELANI/AWS-MiniProjects/blob/master/1.%20Deploy%20a%20django%20project%20on%20AWS%20EC2%20instance/16.%20You%20can%20terminate%20EC2%20instance%20If%20you%20want.png?raw=true)
